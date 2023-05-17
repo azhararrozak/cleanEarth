@@ -23,10 +23,9 @@ const Navbar = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div
-        className={`navbar-collapse collapse w-100 ${
-          isCollapsed ? '' : 'show'
-        }`}
-        id="collapsingNavbar3"
+        className={`navbar-collapse collapse w-100 ${isCollapsed ? '' : 'show'
+          }`}
+        id="collapsingNavbar"
       >
         <ul className="navbar-nav w-100 justify-content-center">
           <li className="nav-item active">
@@ -51,6 +50,14 @@ const Navbar = () => {
           </li>
         </ul>
         <ul className="nav navbar-nav ml-auto w-100 justify-content-end">
+          <li className="nav-item">
+            <Link href="/cart" legacyBehavior>
+              <a className="nav-link">
+                <i className="fas fa-shopping-cart position-relative" aria-hidden="true">
+                </i> Cart
+              </a>
+            </Link>
+          </li>
           <li className="nav-item">
             <Link href="/signin" legacyBehavior>
               <a className="nav-link">
