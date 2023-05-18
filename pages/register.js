@@ -1,21 +1,34 @@
-import React, { useState } from 'react'
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState, useContext } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import valid from '../utils/valid'
+import { DataContext } from '@/store/GlobalState'
+import { postData } from '@/utils/dataFetch'
 
 const register = () => {
 
   const initialisationState = { name: '', email: '', password: '', confirmPassword: '' }
   const [userData, setUserData] = useState(initialisationState)
   const {name, email, password, confirmPassword} = userData
+  const {state, dispatch} = useContext(DataContext)
 
   const handleChangeinput = e => {
     const {name, value} = e.target
     setUserData({...userData, [name]:value})
+    dispatch({ type: 'NOTIFY', payload: {} })
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    console.log(userData)
+    const errMsg = valid(name, email, password, confirmPassword)
+    if(errMsg) return dispatch({ type: 'NOTIFY', payload: {error: errMsg} })
+    dispatch ({ type: 'NOTIFY', payload: {loading: true} })
+    //Add data to DB
+    const res = await postData('auth/register', userData)
+    if(res.err) return dispatch({ type: 'NOTIFY', payload: {error: res.err} })
+    return dispatch({ type: 'NOTIFY', payload: {success: res.msg} })
   }
 
   return (
