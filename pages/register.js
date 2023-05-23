@@ -1,11 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import valid from '../utils/valid'
 import { DataContext } from '@/store/GlobalState'
 import { postData } from '@/utils/dataFetch'
+import { useRouter } from 'next/router'
+
 
 const register = () => {
 
@@ -13,6 +16,10 @@ const register = () => {
   const [userData, setUserData] = useState(initialisationState)
   const {name, email, password, confirmPassword} = userData
   const {state, dispatch} = useContext(DataContext)
+
+  const { auth } = state
+
+  const router = useRouter()
 
   const handleChangeinput = e => {
     const {name, value} = e.target
@@ -30,6 +37,10 @@ const register = () => {
     if(res.err) return dispatch({ type: 'NOTIFY', payload: {error: res.err} })
     return dispatch({ type: 'NOTIFY', payload: {success: res.msg} })
   }
+
+  useEffect(() => {
+    if(Object.keys(auth).length !== 0) router.push("/")
+  }, [auth])
 
   return (
     <div>
