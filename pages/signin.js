@@ -53,7 +53,7 @@ const signin = () => {
   }, [auth])
 
   return (
-    <div>
+    <div className='px-3'>
         <Head>
           <title>Sign in Page</title>
         </Head>

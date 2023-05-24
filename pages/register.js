@@ -43,7 +43,7 @@ const register = () => {
   }, [auth])
 
   return (
-    <div>
+    <div className='px-3'>
     <Head>
       <title>Register Page</title>
     </Head>
