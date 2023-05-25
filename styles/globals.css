@@ -13,18 +13,74 @@ a {
   box-sizing: border-box;
 }
 
-img{
+img {
   object-fit: cover;
   object-position: 0 30%;
 }
 
 @media (min-width: 768px) {
-  .navbar-brand.abs
-      {
-          position: absolute;
-          width: auto;
-          left: 50%;
-          transform: translateX(-50%);
-          text-align: center;
-      }
+  .navbar-brand.abs {
+    position: absolute;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
+}
+
+/* tracker */
+#map {
+  height: 92vh;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card {
+  position: absolute;
+  bottom: 10%;
+  border-radius: 8px;
+  left: 24px;
+  z-index: 9999;
+  width: 300px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  animation: cardSlide 1s ease-in-out;
+}
+
+@keyframes cardSlide {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.gmaps-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
