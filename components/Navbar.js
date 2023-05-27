@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const router = useRouter();
   const { state, dispatch } = useContext(DataContext);
-  const { auth } = state;
+  const { auth, cart } = state;
 
   const handleToggle = () => {
     setIsCollapsed(!isCollapsed);
@@ -49,7 +49,6 @@ const Navbar = () => {
             className="nav-link dropdown-toggle"
             id="navbarDropdown"
             role="button"
-            data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded={isDropdownOpen ? "true" : "false"}
             onClick={handleDropdownToggle}
@@ -75,6 +74,27 @@ const Navbar = () => {
         >
           <Link href="/profile" legacyBehavior>
             <a className="dropdown-item">Profile</a>
+          </Link>
+          <Link href="/cart" legacyBehavior>
+            <a className="dropdown-item">
+              <i className="position-relative" aria-hidden="true">
+                <span
+                  className="position-absolute"
+                  style={{
+                    padding: "3px 6px",
+                    background: "#ed143dc2",
+                    borderRadius: "50%",
+                    top: "-10px",
+                    right: "-10px",
+                    color: "white",
+                    fontSize: "14px",
+                  }}
+                >
+                  {cart.length}
+                </span>
+              </i>
+              Cart
+            </a>
           </Link>
           <button className="dropdown-item" onClick={handleLogout}>
             Logout
@@ -127,11 +147,6 @@ const Navbar = () => {
           </li>
         </ul>
         <ul className="nav navbar-nav ml-auto w-100 justify-content-end">
-          <li className="nav-item">
-            <Link href="/cart" legacyBehavior>
-              <a className={"nav-link" + isActive("/cart")}>Cart</a>
-            </Link>
-          </li>
           {Object.keys(auth).length === 0 ? (
             <li className="nav-item">
               <Link href="/signin" legacyBehavior>

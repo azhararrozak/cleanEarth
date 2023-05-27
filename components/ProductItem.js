@@ -1,8 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import { DataContext } from "@/store/GlobalState";
+import { addToCart } from "@/store/Action";
 
 const ProductItem = ({ product }) => {
+
+  const { state, dispatch } = useContext(DataContext)
+  const { cart, auth } = state
 
   const userLink = () => {
     return (
@@ -16,7 +21,8 @@ const ProductItem = ({ product }) => {
           className="btn btn-success"
           style={{ marginLeft: "5px", flex: 1 }}
           disabled={product.inStock === 0 ? true : false}
-        >
+          onClick={() => dispatch(addToCart(product, cart, auth))}
+          >
           Beli
         </button>
       </>

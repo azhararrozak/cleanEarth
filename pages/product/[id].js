@@ -1,10 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { getData } from "@/utils/dataFetch";
+import { DataContext } from "@/store/GlobalState";
+import { addToCart } from "@/store/Action";
 
 const DetailProduct = (props) => {
   const [product] = useState(props.product);
   const [tab, setTab] = useState(0);
+
+  const { state, dispatch } = useContext(DataContext)
+  const { cart, auth } = state
 
   const isActive = (index) => {
     if (tab === index) return " active";
@@ -55,6 +60,7 @@ const DetailProduct = (props) => {
         <button
           type="button"
           className="btn btn-dark d-block my-3 px-5"
+          onClick={() => dispatch(addToCart(product, cart, auth))}
         >
           Beli
         </button>

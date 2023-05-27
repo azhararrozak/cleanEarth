@@ -1,3 +1,5 @@
+// DB-Cloud: mongodb+srv://DBForWebsite:DBForWebsite@dbforwebsite.5f45os9.mongodb.net/?retryWrites=true&w=majority
+// DB-Local: mongodb://localhost:27017/DBForWebsite
 module.exports = {
   env: {
     "BASE_URL": "http://localhost:3000",
