@@ -71,7 +71,7 @@ img {
   max-height: 100%;
 }
 
-.card {
+.cardTracker {
   position: absolute;
   bottom: 10%;
   border-radius: 8px;
