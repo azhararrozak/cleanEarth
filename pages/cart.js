@@ -7,7 +7,7 @@ import { DataContext } from "@/store/GlobalState";
 import Link from "next/link";
 import CartItem from "@/components/CartItem";
 import { getData } from "@/utils/dataFetch";
-import axios from "axios";
+import axios from "axios"; 
 
 const cart = () => {
   const { state, dispatch } = useContext(DataContext);
@@ -75,6 +75,9 @@ const cart = () => {
     );
 
   const handlePayment = async () => {
+   
+    if(!firstname || !lastname || !address || !city || !mobile) return dispatch({ type: 'NOTIFY', payload: {error: "Fill all form"} })
+
     try {
       const response = await axios.post("/api/payment/transaction", {
         total: total,
@@ -89,7 +92,8 @@ const cart = () => {
       const { transactionRedirectUrl } = response.data;
 
       // Lakukan pengalihan ke halaman pembayaran Midtrans
-      window.location.href = transactionRedirectUrl;
+      window.open(transactionRedirectUrl, "_blank");
+
     } catch (error) {
       console.log("Error occurred:", error);
     }

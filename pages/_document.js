@@ -29,10 +29,7 @@ class MyDocument extends Document {
             src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
             strategy="beforeInteractive"
           />
-          <Script
-            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            defer
-          />
+          <Script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer />
         </body>
       </Html>
     );
