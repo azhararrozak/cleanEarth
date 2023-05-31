@@ -41,6 +41,19 @@ const Navbar = () => {
     return router.push("/");
   };
 
+  const adminRouter = () => {
+    return (
+      <>
+        <Link href="/users" legacyBehavior>
+          <a className="dropdown-item">Users</a>
+        </Link>
+        <Link href="/create-product" legacyBehavior>
+          <a className="dropdown-item">Create Produk</a>
+        </Link>
+      </>
+    );
+  };
+
   const loggedRouter = () => {
     return (
       <li className="nav-item dropdown">
@@ -71,6 +84,7 @@ const Navbar = () => {
         <div
           className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}
           aria-labelledby="navbarDropdown"
+          style={{ minWidth: "0" }}
         >
           <Link href="/profile" legacyBehavior>
             <a className="dropdown-item">Profile</a>
@@ -96,6 +110,8 @@ const Navbar = () => {
               Cart
             </a>
           </Link>
+          {auth.user.role === "admin" && adminRouter()}
+          <div className="dropdown-divider"></div>
           <button className="dropdown-item" onClick={handleLogout}>
             Logout
           </button>
@@ -138,6 +154,11 @@ const Navbar = () => {
           <li className="nav-item">
             <Link href="/tracker" legacyBehavior>
               <a className={"nav-link" + isActive("/tracker")}>Tracker</a>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link href="/blog" legacyBehavior>
+              <a className={"nav-link" + isActive("/blog")}>Blog</a>
             </Link>
           </li>
           <li className="nav-item">
