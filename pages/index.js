@@ -11,7 +11,7 @@ const Home = () => {
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/img/Trash11.jpg" class="d-block w-100" alt="..." />
+            <img src="/Trash11.jpg" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <h5>Welcome To Cleanearth</h5>
               <button type="button" class="btn btn-light">More</button>
@@ -20,7 +20,7 @@ const Home = () => {
           </div>
 
           <div class="carousel-item">
-            <img src="/img/Trash22.jpg" class="d-block w-100" alt="..." />
+            <img src="/Trash22.jpg" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <h5>let's process waste into useful items</h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -28,7 +28,7 @@ const Home = () => {
           </div>
 
           <div class="carousel-item">
-            <img src="/img/Trash33.jpg" class="d-block w-100" alt="..." />
+            <img src="/Trash33.jpg" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <h5>Dispose of your trash properly</h5>
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
