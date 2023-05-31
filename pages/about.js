@@ -16,10 +16,10 @@ const about = () => {
 					<div class="teamy teamy_style1 teamy_mask-circle">
 						<div class="teamy_layout">
 							<div class="teamy_preview"> 
-              <img src="/empty-cart.jpg" className="teamy_avatar" width={600}/>
+              <img src="/uzdha.jpg" className="teamy_avatar" width={600}/>
               </div>
 							<div class="teamy_back">
-								<main class="teamy_back-inner"> <a href="https://github.com" class="social"> <FaGithub/></a> <a href="https://linkedin.com" class="social"> <FaLinkedin/></a> </main>
+								<main class="teamy_back-inner"> <a href="https://github.com/uzdha " class="social"> <FaGithub/></a> <a href="www.linkedin.com/in/uzdhazachrias" class="social"> <FaLinkedin/></a> </main>
 							</div>
 						</div>
 						<div class="teamy_content">
