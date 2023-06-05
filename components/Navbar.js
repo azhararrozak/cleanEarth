@@ -44,11 +44,8 @@ const Navbar = () => {
   const adminRouter = () => {
     return (
       <>
-        <Link href="/users" legacyBehavior>
-          <a className="dropdown-item">Users</a>
-        </Link>
         <Link href="/create-product" legacyBehavior>
-          <a className="dropdown-item">Create Produk</a>
+          <a className="dropdown-item">Produk</a>
         </Link>
       </>
     );

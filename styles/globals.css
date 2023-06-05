@@ -64,11 +64,11 @@ img {
 }
 
 /* Home */
-img {
+.bright {
   filter: brightness(50%);
 }
 
-h5 {
+.titleHome {
   text-align: center;
   line-height: 1.2;
   margin-bottom: 150px;
@@ -76,7 +76,7 @@ h5 {
   font-weight: 700;
 }
 
-.btn {
+.btnHome {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 14px;

@@ -65,7 +65,7 @@ const cart = () => {
   if (cart.length === 0)
     return (
       <div className="container d-flex flex-column align-items-center justify-content-center text-center p-4">
-        <img src="/empty-cart.jpg" className="img-fluid" width={600} />
+        <img src="/img/empty-cart.jpg" className="img-fluid" width={600} />
         <h3>Your cart is empty</h3>
         <p>Start shopping and fill your cart with amazing products!</p>
         <Link href={"/product"} legacyBehavior>
