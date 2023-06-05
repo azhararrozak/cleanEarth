@@ -1,8 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { DataContext } from "@/store/GlobalState";
 import { imageUpload } from "@/utils/imageUploadCloudinary";
-import { postData } from "@/utils/dataFetch";
+import { postData, getData, putData } from "@/utils/dataFetch";
+import { useRouter } from "next/router";
 
 const CreateProduct = () => {
   const initialState = {
@@ -19,6 +21,24 @@ const CreateProduct = () => {
 
   const { state, dispatch } = useContext(DataContext);
   const { auth } = state;
+
+  const router = useRouter();
+  const { id } = router.query;
+  const [onEdit, setOnEdit] = useState(false);
+
+  useEffect(() => {
+    if (id) {
+      setOnEdit(true);
+      getData(`product/${id}`).then((res) => {
+        setProduct(res.product);
+        setImages(res.product.images);
+      });
+    } else {
+      setOnEdit(false);
+      setProduct(initialState);
+      setImages([]);
+    }
+  }, [id]);
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -96,13 +116,33 @@ const CreateProduct = () => {
 
     if (imgNewURL.length > 0) media = await imageUpload(imgNewURL);
 
-    const res = await postData(
-      "product",
-      { ...product, images: [...imgOldURL, ...media] },
-      auth.token
-    );
+    let res;
+    if (onEdit) {
+      res = await putData(
+        `product/${id}`,
+        { ...product, images: [...imgOldURL, ...media] },
+        auth.token
+      );
 
-    if (res.err) return dispatch({ type: "NOTIFY", payload: { error: res.err } });
+      router.push("/product");
+
+      if (res.err)
+        return dispatch({ type: "NOTIFY", payload: { error: res.err } });
+    } else {
+      res = await postData(
+        "product",
+        { ...product, images: [...imgOldURL, ...media] },
+        auth.token
+      );
+
+      router.push("/product");
+
+      if (res.err)
+        return dispatch({ type: "NOTIFY", payload: { error: res.err } });
+    }
+
+    if (res.err)
+      return dispatch({ type: "NOTIFY", payload: { error: res.err } });
 
     return dispatch({ type: "NOTIFY", payload: { success: res.msg } });
   };
@@ -169,7 +209,7 @@ const CreateProduct = () => {
           />
 
           <button type="submit" className="btn btn-info my-2 px-4">
-            crate
+            {onEdit ? "Update" : "Create"}
           </button>
         </div>
 
