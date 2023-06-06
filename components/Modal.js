@@ -1,15 +1,38 @@
-import React,{ useContext} from "react";
+import React, { useContext } from "react";
 import { DataContext } from "@/store/GlobalState";
 import { deleteItem } from "@/store/Action";
+import { useRouter } from "next/router";
+import { deleteData } from "@/utils/dataFetch"
 
 const Modal = () => {
-  const {state, dispatch} = useContext(DataContext)
-  const { modal } = state
+  const { state, dispatch } = useContext(DataContext);
+  const { modal, auth } = state;
 
-  const deleteCartItem = () => {
-    dispatch(deleteItem(modal.data, modal.id, 'ADD_CART'))
-    dispatch({ type: 'ADD_MODAL', payload: {}})
-  }
+  const router = useRouter()
+
+  const deleteProduct = (item) => {
+    dispatch({ type: "NOTIFY", payload: { loading: true } });
+    deleteData(`product/${item.id}`, auth.token).then((res) => {
+      if (res.err)
+        return dispatch({ type: "NOTIFY", payload: { error: res.err } });
+      dispatch({ type: "NOTIFY", payload: { success: res.msg } });
+      return router.push("/");
+    });
+  };
+
+  const handleSubmit = () => {
+    if(modal.length !== 0){
+        for(const item of modal){
+            if(item.type === 'ADD_CART'){
+                dispatch(deleteItem(item.data, item.id, item.type))
+            }
+    
+            if(item.type === 'DELETE_PRODUCT') deleteProduct(item)
+    
+            dispatch({ type: 'ADD_MODAL', payload: [] })
+        }
+    }
+}
 
   return (
     <div
@@ -24,7 +47,7 @@ const Modal = () => {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title text-capitalize" id="exampleModalLabel">
-              {modal.title}
+            {modal.length !== 0 && modal[0] && modal[0].title}
             </h5>
             <button
               type="button"
@@ -41,7 +64,7 @@ const Modal = () => {
               type="button"
               className="btn btn-secondary"
               data-dismiss="modal"
-              onClick={deleteCartItem}
+              onClick={handleSubmit}
             >
               Yes
             </button>

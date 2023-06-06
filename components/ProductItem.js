@@ -39,9 +39,8 @@ const ProductItem = ({ product }) => {
         <button
           className="btn btn-danger"
           style={{ marginLeft: "5px", flex: 1 }}
-          data-toggle="modal"
-          data-target="#exampleModal"
-          onClick={() =>
+          onClick={() => {
+            $("#exampleModal").modal("show");
             dispatch({
               type: "ADD_MODAL",
               payload: [
@@ -52,8 +51,8 @@ const ProductItem = ({ product }) => {
                   type: "DELETE_PRODUCT",
                 },
               ],
-            })
-          }
+            });
+          }}
         >
           Delete
         </button>

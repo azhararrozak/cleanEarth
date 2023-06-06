@@ -43,7 +43,7 @@ const CartItem = ({item, dispatch, cart}) => {
                     $('#exampleModal').modal('show'); 
                     dispatch({
                         type: 'ADD_MODAL',
-                        payload: {data: cart, id: item._id, title: item.title}
+                        payload: [{ data: cart, id: item._id, title: item.title, type: 'ADD_CART' }]
                     })
                 }}
                 >Hapus</button>
