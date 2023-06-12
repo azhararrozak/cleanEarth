@@ -1,9 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
+import Head from "next/head";
 
 const Home = () => {
   return (
     <div className="home">
+      <Head>
+        <title>Home Page</title>
+      </Head>
+
       <div
         id="carouselExampleCaptions"
         className="carousel slide"

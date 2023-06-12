@@ -2,10 +2,15 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Head from "next/head";
 
 const about = () => {
   return (
     <section className="section">
+      <Head>
+        <title>About Page</title>
+      </Head>
+
       <div className="container">
         <div className="section_header">
           <h2 className="title section_title">Our Team</h2>

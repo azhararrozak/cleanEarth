@@ -6,8 +6,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { DataContext } from "@/store/GlobalState";
 import Link from "next/link";
 import CartItem from "@/components/CartItem";
-import { getData } from "@/utils/dataFetch";
-import axios from "axios"; 
+import { getData, postData } from "@/utils/dataFetch";
+import axios from "axios";
+import Head from "next/head";
+import Script from "next/script";
 
 const cart = () => {
   const { state, dispatch } = useContext(DataContext);
@@ -75,8 +77,8 @@ const cart = () => {
     );
 
   const handlePayment = async () => {
-   
-    if(!firstname || !lastname || !address || !city || !mobile) return dispatch({ type: 'NOTIFY', payload: {error: "Fill all form"} })
+    if (!firstname || !lastname || !address || !city || !mobile)
+      return dispatch({ type: "NOTIFY", payload: { error: "Fill all form" } });
 
     try {
       const response = await axios.post("/api/payment/transaction", {
@@ -86,14 +88,39 @@ const cart = () => {
         email: email,
         address: address,
         city: city,
-        mobile: mobile
+        mobile: mobile,
       });
 
-      const { transactionRedirectUrl } = response.data;
+      //const { transactionRedirectUrl } = response.data;
+      const { snapToken } = response.data;
 
       // Lakukan pengalihan ke halaman pembayaran Midtrans
-      window.open(transactionRedirectUrl, "_blank");
+      //window.open(transactionRedirectUrl, "_blank");
+      snap.pay(snapToken, {
+        onSuccess: async function (result) {
+          //console.log("success");
+          console.log(result);
+          const getData = {
+            orderId: result.orderId, 
+          }
 
+          const res = await postData('payment', getData)
+          console.log(res)
+        },
+        onPending: function (result) {
+          console.log("pending");
+          console.log(result);
+        },
+        onError: function (result) {
+          console.log("error");
+          console.log(result);
+        },
+        onClose: function () {
+          console.log(
+            "customer closed the popup without finishing the payment"
+          );
+        },
+      });
     } catch (error) {
       console.log("Error occurred:", error);
     }
@@ -101,6 +128,16 @@ const cart = () => {
 
   return (
     <div className="row mx-auto">
+      <Head>
+        <title>Cart Page</title>
+      </Head>
+
+      <Script
+        type="text/javascript"
+        src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key={process.env.CLIENT_KEY}
+      />
+
       <div className="col-md-8 text-secondary table-responsive my-3">
         <h2 className="text-uppercase">Shopping Cart</h2>
 

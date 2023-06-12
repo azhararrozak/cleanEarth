@@ -143,8 +143,11 @@ const Tracker = () => {
 
   return (
     <div>
-      <div id="map" className="leaflet-container"></div>
+      <Head>
+        <title>Tracker Page</title>
+      </Head>
 
+      <div id="map" className="leaflet-container"></div>
       {showCard && (
         <Card className="cardTracker">
           <Card.Img src={cardImage} />

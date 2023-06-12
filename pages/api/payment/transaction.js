@@ -76,15 +76,15 @@ export default async function handler(req, res) {
     const transaction = await snap.createTransaction(parameter);
 
     // Dapatkan token transaksi
-    const transactionToken = transaction.token;
-    console.log("transactionToken:", transactionToken);
+    const snapToken = transaction.token;
+    console.log("snapToken:", snapToken);
 
     // Dapatkan URL redirect transaksi
     const transactionRedirectUrl = transaction.redirect_url;
     console.log("transactionRedirectUrl:", transactionRedirectUrl);
 
     // Kirim token dan URL redirect sebagai respons API
-    res.status(200).json({ transactionToken, transactionRedirectUrl });
+    res.status(200).json({ snapToken, transactionRedirectUrl });
   } catch (e) {
     console.log("Error occurred:", e.message);
     res.status(500).json({ error: "An error occurred" });
