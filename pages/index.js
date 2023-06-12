@@ -1,14 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-import Head from "next/head";
 
 const Home = () => {
   return (
     <div className="home">
-      <Head>
-        <title>Home Page</title>
-      </Head>
-
       <div
         id="carouselExampleCaptions"
         className="carousel slide"
@@ -28,9 +23,6 @@ const Home = () => {
             <img src="/img/Trash11.jpg" className="d-block w-100 bright" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5 className="titleHome">Welcome To Cleanearth</h5>
-              <button type="button" className="btnHome btn-light">
-                More
-              </button>
               <p>Keep the earth clean for our future generations.</p>
             </div>
           </div>
@@ -38,18 +30,14 @@ const Home = () => {
           <div className="carousel-item">
             <img src="/img/Trash22.jpg" className="d-block w-100 bright" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5 className="titleHome">let's process waste into useful items</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h5 className="titleHome">Ayo! Olah Sampah Mu Menjadi Barang Yang Bermanfaat</h5>
             </div>
           </div>
 
           <div className="carousel-item">
             <img src="/img/Trash33.jpg" className="d-block w-100 bright" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5 className="titleHome">Dispose of your trash properly</h5>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <h5 className="titleHome">Buanglah Sampahmu Di Tempat Yang Benar</h5>
             </div>
           </div>
         </div>
@@ -79,14 +67,22 @@ const Home = () => {
         </a>
       </div>
 
-      <section className="section">
-        <div className="container">
-          <div className="section_header">
-            <h2 className="title section_title">Mari Jaga Bumi Kita</h2>
+      <div class="wrapper">
+        <div class="about-container">
+
+          <div class="image-container">
+            <img src="/img/logo.jpg" alt=""/>
           </div>
+
+          <div class="text-container">
+            <h1>Cleanearth</h1>
+            <p>CleanEarth adalah website dapat memudahkan masyarakat untuk melakukan jual beli sampah atau barang bekas secara online yang kiranya masih layak pakai ataupun bisa di daur ulang menjadi barang yang bermanfaat, juga di dalam aplikasi website ini terdapat fitur artikel yang diharapkan berguna untuk menambah pengetahuan masyarakat tentang bahayanya sampah plastik, pengelolaan sampah yang baik, dan lain sebagainya. </p>
+          </div>
+
         </div>
-      </section>
+      </div>
     </div>
+
   );
 };
 
