@@ -17,7 +17,7 @@ const DetailProduct = (props) => {
   };
 
   return (
-    <div className="row detail_page">
+    <div className="row detail_page mx-0">
       <div className="col-md-6">
         <img
           src={product.images[tab].url}

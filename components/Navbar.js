@@ -51,6 +51,34 @@ const Navbar = () => {
     );
   };
 
+  const userRouter = () => {
+    return (
+      <>
+        <Link href="/cart" legacyBehavior>
+          <a className="dropdown-item">
+            <i className="position-relative" aria-hidden="true">
+              <span
+                className="position-absolute"
+                style={{
+                  padding: "3px 6px",
+                  background: "#ed143dc2",
+                  borderRadius: "50%",
+                  top: "-10px",
+                  right: "-10px",
+                  color: "white",
+                  fontSize: "14px",
+                }}
+              >
+                {cart.length}
+              </span>
+            </i>
+            Cart
+          </a>
+        </Link>
+      </>
+    );
+  };
+
   const loggedRouter = () => {
     return (
       <li className="nav-item dropdown">
@@ -86,27 +114,8 @@ const Navbar = () => {
           <Link href="/profile" legacyBehavior>
             <a className="dropdown-item">Profile</a>
           </Link>
-          <Link href="/cart" legacyBehavior>
-            <a className="dropdown-item">
-              <i className="position-relative" aria-hidden="true">
-                <span
-                  className="position-absolute"
-                  style={{
-                    padding: "3px 6px",
-                    background: "#ed143dc2",
-                    borderRadius: "50%",
-                    top: "-10px",
-                    right: "-10px",
-                    color: "white",
-                    fontSize: "14px",
-                  }}
-                >
-                  {cart.length}
-                </span>
-              </i>
-              Cart
-            </a>
-          </Link>
+          {auth.user.role === "user" && userRouter()}
+
           {auth.user.role === "admin" && adminRouter()}
           <div className="dropdown-divider"></div>
           <button className="dropdown-item" onClick={handleLogout}>

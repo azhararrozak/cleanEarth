@@ -1,24 +1,32 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const paymentSchema = new mongoose.Schema({
-  transactionId: {
+  user: {
+    type: mongoose.Types.ObjectId,
+    ref: "user",
+  },
+  transaction_id: {
     type: String,
     required: true,
   },
-  orderId: {
+  order_id: {
     type: String,
     required: true,
   },
-  paymentStatus: {
+  fraud_status: {
     type: String,
     required: true,
   },
-  paymentType: {
+  payment_type: {
     type: String,
     required: true,
   },
-  totalAmount: {
+  gross_amount: {
     type: Number,
+    required: true,
+  },
+  pdf_url: {
+    type: String,
     required: true,
   },
   createdAt: {
@@ -27,6 +35,7 @@ const paymentSchema = new mongoose.Schema({
   },
 });
 
-let Payment = mongoose.models.payment || mongoose.model('payment', paymentSchema);
+let Payment =
+  mongoose.models.payment || mongoose.model("payment", paymentSchema);
 
 export default Payment;
