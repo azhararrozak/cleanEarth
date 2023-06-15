@@ -129,10 +129,10 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-light navbar-expand-md bg-faded justify-content-center bg-light">
       <Link href="/" legacyBehavior>
-        <a className="navbar-brand d-flex w-50 mr-auto">Cleanearth</a>
+        <a className="navbar-brand d-flex w-50 mr-auto">CleanEarth</a>
       </Link>
       <button
-        className="navbar-toggler"
+        className="navbar-toggler border-0"
         type="button"
         onClick={handleToggle}
         aria-expanded={!isCollapsed}
