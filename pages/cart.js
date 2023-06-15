@@ -13,7 +13,7 @@ import Script from "next/script";
 
 const cart = () => {
   const { state, dispatch } = useContext(DataContext);
-  const { cart, auth } = state;
+  const { cart, auth, orders } = state;
 
   const [total, setTotal] = useState(0);
 
@@ -99,13 +99,23 @@ const cart = () => {
       snap.pay(snapToken, {
         onSuccess: async function (result) {
           //console.log("success");
-          console.log(result);
-          const getData = {
-            orderId: result.orderId, 
-          }
+          //console.log(result);
 
-          const res = await postData('payment', getData)
-          console.log(res)
+          const getData = {
+            transaction_id: result.transaction_id,
+            order_id: result.order_id,
+            fraud_status: result.fraud_status,
+            payment_type: result.payment_type,
+            gross_amount: result.gross_amount,
+            pdf_url: result.pdf_url
+          }
+          
+          const res = await postData('payment', getData, auth.token).then(res => {
+            if(res.err) return dispatch({type: 'NOTIFY', payload: {error: res.err}})
+
+            dispatch({type: 'ADD_ORDERS', payload: [...orders, res.newPaymentOrder]})
+            return dispatch({type: 'NOTIFY', payload: {success: res.msg}})
+          })
         },
         onPending: function (result) {
           console.log("pending");
