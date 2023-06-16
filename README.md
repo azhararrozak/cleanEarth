@@ -20,5 +20,5 @@ Dalam website ini kami menydiakan dua role:
   `$ npm install`
   * Jalankan mode dev or build
   `$ npm run dev || npm run build`
-### Project Brief and Presentasi
+### Project Brief dan Presentasi
 - coming soon
