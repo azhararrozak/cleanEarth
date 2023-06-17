@@ -1,12 +1,9 @@
-import { getData } from "@/utils/dataFetch";
-import React, { useState } from "react";
-import Head from "next/head";
-import ProductItem from "@/components/ProductItem"
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
+import Head from "next/link";
+import ProductItem from "@/components/ProductItem";
 
-const Product = (props) => {
-  const [products, setProducts] = useState(props.products);
-  
-  
+const Home = () => {
   return (
     <div className="products">
       <Head>
@@ -23,21 +20,8 @@ const Product = (props) => {
           ))
       }
     </div>
+
   );
 };
 
-// server side rendering
-export async function getServerSideProps() {
-  
-  const res = await getData("product");
-  console.log(res);
-
-  return {
-    props: {
-      products: res.products,
-      result: res.result,
-    },
-  };
-}
-
-export default Product;
+export default Home;
