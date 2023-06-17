@@ -1,6 +1,9 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
+
+import Map from "@/components/Map";
 
 const Home = () => {
   return (
@@ -86,17 +89,16 @@ const Home = () => {
       {/* Tengah */}
       <br /> <br />
       <div className="container">
-        <div className="row no-gutters">
+        <div className="row text-center">
           <div className="col-lg-4 col-md-6">
-            <div className="icon-box">
+            <div className="icon-box ">
               <img src="/img/check.png" />
               <br /> <br />
               <h4 className="title">
                 <a href="">Terpercaya</a>
               </h4>
               <p className="description">
-                CleanEarth adalah website dapat memudahkan masyarakat untuk
-                melakukan jual beli sampah atau barang bekas secara online yang
+                CleanEarth adalah website yang telah dipercaya masyarakat indonesia telah ada ribuan client dari berbagai daerah
               </p>
             </div>
           </div>
@@ -106,11 +108,10 @@ const Home = () => {
               <br />
               <br />
               <h4 className="title">
-                <a href="">APAPAPAPAP</a>
+                <a href="">Lokasi</a>
               </h4>
               <p className="description">
-                CleanEarth adalah website dapat memudahkan masyarakat untuk
-                melakukan jual beli sampah atau barang bekas secara online yang
+                CleanEarth memudahkan anda untuk mengetahui lokasi bank sampah terdekat dari lokasi anda
               </p>
             </div>
           </div>
@@ -120,36 +121,44 @@ const Home = () => {
               <br />
               <br />
               <h4 className="title">
-                <a href="">APAPPPAPAPAP</a>
+                <a href="">Jual-Beli</a>
               </h4>
               <p className="description">
                 CleanEarth adalah website dapat memudahkan masyarakat untuk
-                melakukan jual beli sampah atau barang bekas secara online yang
+                melakukan jual beli sampah atau barang bekas secara online
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="wrapper">
-        <div className="about-container">
-          <div className="image-container">
-            <img src="/img/logo.jpg" alt="" />
-          </div>
-
-          <div className="text-container">
-            <h1>Cleanearth</h1>
-            <p>
-              CleanEarth adalah website dapat memudahkan masyarakat untuk
-              melakukan jual beli sampah atau barang bekas secara online yang
-              kiranya masih layak pakai ataupun bisa di daur ulang menjadi
-              barang yang bermanfaat, juga di dalam aplikasi website ini
-              terdapat fitur artikel yang diharapkan berguna untuk menambah
-              pengetahuan masyarakat tentang bahayanya sampah plastik,
-              pengelolaan sampah yang baik, dan lain sebagainya.{" "}
-            </p>
+      <section id="cta" className="cta">
+        <div className="container" data-aos="zoom-in">
+          <div className="row">
+            <div className="col-lg-9 text-center text-lg-start">
+              <h3>Daftar Sekarang</h3>
+              <p>
+                {" "}
+                Jadilah bagian dari kami untuk berkontribusi dan dapatkan manfaatnya
+              </p>
+            </div>
+            <div className="col-lg-3 cta-btn-container text-center">
+              <a className="cta-btn align-middle text-decoration-none" href="/register">
+                Register
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section>
+        <div className="text-center my-4">
+          <h3>Bergabunglah Bersama Kami</h3>
+          <p>Merubah dunia menjadi lebih baik</p>
+        </div>
+
+        <div className="px-4 pb-4">
+          <Map />
+        </div>
+      </section>
     </div>
   );
 };
