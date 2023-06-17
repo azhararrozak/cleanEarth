@@ -20,10 +20,10 @@ const Footer = () => {
           <h5>Article</h5>
           <ul className="list-unstyled">
             <li>
-              <Link href="/">Ubah Sampah Jadi Uang</Link>
+              <Link href="/blog/648bd11a4438fcb45f88a368">Kurangi Sampah Plastik Demi 2023 Lebih Sehat</Link>
             </li>
             <li>
-              <Link href="/">Manfaat Pengelolaan Barang Bekas</Link>
+              <Link href="/blog/648bd11a4438fcb45f88a369">Cara Indonesia Kurangi Sampah Plastik hingga 70 Persen</Link>
             </li>
           </ul>
         </div>

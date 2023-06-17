@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState, useContext, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'

@@ -16,7 +16,7 @@ const Product = (props) => {
       {
         products.length === 0 
         ? 
-          <h2>Nothing Product</h2> 
+          <h2>Nothing Product List</h2> 
         :
           products.map(product => (
             <ProductItem key={product._id} product={product} />
