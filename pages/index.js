@@ -67,11 +67,41 @@ const Home = () => {
         </a>
       </div>
 
+      {/* Tengah */}
+      <br /> <br />
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <img src="/img/check.png" /><br /> <br />
+              <h4 class="title"><a href="">Terpercaya</a></h4>
+              <p class="description">CleanEarth adalah website dapat memudahkan masyarakat untuk melakukan jual beli sampah atau barang bekas secara online yang</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <img src="/img/marker.png" /><br /><br />
+              <h4 class="title"><a href="">APAPAPAPAP</a></h4>
+              <p class="description">CleanEarth adalah website dapat memudahkan masyarakat untuk melakukan jual beli sampah atau barang bekas secara online yang</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <img src="/img/shopping-cart.png" /><br /><br />
+              <h4 class="title"><a href="">APAPPPAPAPAP</a></h4>
+              <p class="description">CleanEarth adalah website dapat memudahkan masyarakat untuk melakukan jual beli sampah atau barang bekas secara online yang</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
       <div class="wrapper">
         <div class="about-container">
 
           <div class="image-container">
-            <img src="/img/logo.jpg" alt=""/>
+            <img src="/img/logo.jpg" alt="" />
           </div>
 
           <div class="text-container">
