@@ -12,7 +12,6 @@ Dalam website ini kami menydiakan dua role:
 - Admin: Dapat menambah barang yang akan dijual
 - User: Dapat membeli barang, mengakses peta dan mengakses artikel/blog 
 ### Start Aplikasi
-+ Live Web: coming soon.
 + Locally:
   * Req
     Node JS >= 16
@@ -20,5 +19,14 @@ Dalam website ini kami menydiakan dua role:
   `$ npm install`
   * Jalankan mode dev or build
   `$ npm run dev || npm run build`
+### Cara Membayar Produk
++ Copy VA Pembayaran
++ Gunakan simulator midtrans
+  * https://simulator.sandbox.midtrans.com/bni/va/index
 ### Project Brief dan Presentasi
-- coming soon
++ Project Brief
+  * https://docs.google.com/document/d/19lLOuoitAXvSwfkHhxEuaXQMDI2xExdCDVxRF5Aqhk0/edit?usp=sharing
++ Link Presentasi
+  * https://docs.google.com/presentation/d/1OCjNXSIwpw951QR7JsmIj50tFYCC0e1JrGW940zzMMQ/edit
++ Link Video Demo
+  * Comming Sooon
