@@ -203,7 +203,7 @@ img {
   color: #47b2e4;
 }
 
-.description {
+.description, .text-justify {
   color: #8f8f8f;
 }
 
@@ -464,12 +464,6 @@ form input[type="submit"]:hover {
   align-items: center;
   margin-top: 4rem;
 }
-
-.back-blog {
-  color: red;
-  font-size: 1rem;
-}
-
 
 /* about */
 
