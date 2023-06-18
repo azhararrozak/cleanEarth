@@ -5,6 +5,9 @@
 
 import Map from "@/components/Map";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faLocationDot, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 const Home = () => {
   return (
     <div className="home">
@@ -92,10 +95,12 @@ const Home = () => {
         <div className="row text-center">
           <div className="col-lg-4 col-md-6">
             <div className="icon-box ">
-              <img src="/img/check.png" />
+            <a href="/about">
+              <FontAwesomeIcon icon={faCheck} className="custom-icon fa-4x" />
+              </a>
               <br /> <br />
               <h4 className="title">
-                <a href="">Terpercaya</a>
+                Terpercaya
               </h4>
               <p className="description">
                 CleanEarth adalah website yang telah dipercaya masyarakat indonesia telah ada ribuan client dari berbagai daerah
@@ -104,11 +109,13 @@ const Home = () => {
           </div>
           <div className="col-lg-4 col-md-6">
             <div className="icon-box">
-              <img src="/img/marker.png" />
+              <a href="/tracker">
+                <FontAwesomeIcon icon={faLocationDot} className="custom-icon fa-4x" />
+              </a>
               <br />
               <br />
               <h4 className="title">
-                <a href="">Lokasi</a>
+                Lokasi
               </h4>
               <p className="description">
                 CleanEarth memudahkan anda untuk mengetahui lokasi bank sampah terdekat dari lokasi anda
@@ -117,11 +124,13 @@ const Home = () => {
           </div>
           <div className="col-lg-4 col-md-6">
             <div className="icon-box">
-              <img src="/img/shopping-cart.png" />
+            <a href="/product">
+              <FontAwesomeIcon icon={faCartShopping} className="custom-icon fa-4x" />
+              </a>
               <br />
               <br />
               <h4 className="title">
-                <a href="">Jual-Beli</a>
+                Jual-Beli
               </h4>
               <p className="description">
                 CleanEarth adalah website dapat memudahkan masyarakat untuk
@@ -155,9 +164,36 @@ const Home = () => {
           <p>Merubah dunia menjadi lebih baik</p>
         </div>
 
-        <div className="px-4 pb-4">
-          <Map />
+
+
+        <div className="container">
+          <div className="row ">
+            <div className="px-4 pb-4 col-lg-6">
+              <Map />
+            </div>
+            <div className="col-lg-6">
+              <form
+                action="mailto:contact@cleanearth.org"
+                method="post"
+                encType="text/plain"
+              >
+                <label htmlFor="name">Your name : </label>
+                <input type="text" name="name" /><br />
+
+                <label htmlFor="email">Your email : </label>
+                <input type="email" name="email" /><br />
+
+                <label htmlFor="message">Your message : </label><br />
+                <textarea name="message" cols="40" rows="4"></textarea><br />
+
+                <input type="submit" value="Send" />
+              </form>
+            </div>
+
+          </div>
         </div>
+
+
       </section>
     </div>
   );

@@ -30,7 +30,7 @@ const Tracker = () => {
           title: "Bank Sampah Hijau Selaras Mandiri",
           popupDescription: "Jakarta",
           cardDescription:
-            "This is card description 1 dmc ma vnz n n v amd cma d and cn sn cnaksn cn",
+            "Kompleks Angkasa Pura Blok PQRS RT:14 RW:06 Kelurahan, RT.14/RW.11, Kebon Kosong, Kemayoran, Central Jakarta City, Jakarta 10630",
           cardImage:
             "https://lh5.googleusercontent.com/p/AF1QipP5WzxsPDVWVHbasg13knzHDCTakkqJs6_bgjXJ=w426-h240-k-no",
           gmapsLink: "https://goo.gl/maps/y7LtbGx3RWaMLnRY7",
@@ -39,17 +39,17 @@ const Tracker = () => {
           coordinates: [-6.221567865281104, 106.83856038399733],
           title: "Bank Sampah Induk Gesit",
           popupDescription: "Jakarta",
-          cardDescription: "This is card description 2",
+          cardDescription: "Jl. Menteng Pulo No.01, RW.1, Menteng Atas, Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12960",
           cardImage:
             "https://lh5.googleusercontent.com/p/AF1QipObY2Pv_hCYM7FGDodpb37pKDmnUBx-M5TM9fxX=w408-h306-k-no",
-          gmapsLink: "",
+          gmapsLink: "https://goo.gl/maps/KkhSYeD3iyVpHMD59",
         },
         {
           coordinates: [-6.214373926627798, 106.75537877158739],
           title: "Bank Sampah Berdikari",
           popupDescription: "Jakarta",
           cardDescription:
-            "This is card description 1 dmc ma vnz n n v amd cma d and cn sn cnaksn cn",
+            "Jl. Lap. Merah Gg. H.Yasin No.6, RW.3, Joglo, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11640",
           cardImage:
             "https://lh5.googleusercontent.com/p/AF1QipO9P8ew7C0KXOF8Bsb4LXDOhnv_MIwySp8MBmyb=w408-h816-k-no",
           gmapsLink: "https://goo.gl/maps/m9xPmqQn3QZFYGUL7",
@@ -59,7 +59,7 @@ const Tracker = () => {
           title: "Bank Sampah Induk Rumah Harum",
           popupDescription: "Depok",
           cardDescription:
-            "This is card description 1 dmc ma vnz n n v amd cma d and cn sn cnaksn cn",
+            "Jl. Merdeka No.1, RW.01, Abadijaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411",
           cardImage:
             "https://lh5.googleusercontent.com/p/AF1QipPdcJXVfs0N9IBA-3fRMxgUCjlKCYNG_rVa1PGh=w408-h839-k-no",
           gmapsLink: "https://goo.gl/maps/GDQ4HttE67Lc2Yvb6",
@@ -69,7 +69,7 @@ const Tracker = () => {
           title: "Bank Sampah Mekar Sari",
           popupDescription: "Jakarta",
           cardDescription:
-            "This is card description 1 dmc ma vnz n n v amd cma d and cn sn cnaksn cn",
+            "Jl. Mampang Prapatan IV No.5, RT.8/RW.5, Mampang Prpt., Kec, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12790",
           cardImage:
             "https://lh5.googleusercontent.com/p/AF1QipPl3qYAwqhsziIuAUnJUivRB8UBG0Zue0RUollQ=w408-h544-k-no",
           gmapsLink: "https://goo.gl/maps/SuESM966paHp3SX49",
@@ -79,7 +79,7 @@ const Tracker = () => {
           title: "Bank Sampah Bumi Daya Bersih",
           popupDescription: "Depok",
           cardDescription:
-            "This is card description 1 dmc ma vnz n n v amd cma d and cn sn cnaksn cn",
+            "Jl. Bbd Raya, Mekarsari, Kec. Cimanggis, Kota Depok, Jawa Barat 16452",
           cardImage:
             "https://lh5.googleusercontent.com/p/AF1QipMAJPXZE8pK5dJK8otQxcTVXe0UUv0V3oxoE8kV=w408-h461-k-no",
           gmapsLink: "https://goo.gl/maps/WUKDXNFdSTpAWfDm6",
@@ -89,7 +89,7 @@ const Tracker = () => {
           title: "Bank Sampah Sumber Mutiara",
           popupDescription: "Tangerang",
           cardDescription:
-            "This is card description 1 dmc ma vnz n n v amd cma d and cn sn cnaksn cn",
+            "jl lembang Jl. Onar, RT.04/RW.008, Sudimara Bar., Kec. Ciledug, Kota Tangerang, Banten 15151",
           cardImage:
             "https://lh5.googleusercontent.com/p/AF1QipOZrB4j5iD6zPGrrMpcvLZ51bLA20lfeAA1yh4-=w408-h904-k-no",
           gmapsLink: "https://goo.gl/maps/tGqCBRTSEbK23nED7",
@@ -99,7 +99,7 @@ const Tracker = () => {
           title: "Bank Sampah VIDA",
           popupDescription: "Bekasi",
           cardDescription:
-            "This is card description 1 dmc ma vnz n n v amd cma d and cn sn cnaksn cn",
+            "Jl. Taman Apel Hijau I No.69, RT.002/RW.001, Padurenan, Kec. Mustika Jaya, Kota Bks, Jawa Barat 16340",
           cardImage:
             "https://lh5.googleusercontent.com/p/AF1QipPC6VA0EtKudc1NZH2EvgLrvzIE_ksEwyFD6OJp=w408-h306-k-no",
           gmapsLink: "https://goo.gl/maps/KhUWK1ybs2LCkdeK8",
@@ -109,7 +109,7 @@ const Tracker = () => {
           title: "Bank Sampah Dadali",
           popupDescription: "Bekasi",
           cardDescription:
-            "This is card description 1 dmc ma vnz n n v amd cma d and cn sn cnaksn cn",
+            "Kp Rawa Pasung RT.001 RW.004, No 129, RT.003/RW.004, Kali Baru, Kecamatan Medan Satria, Kota Bks, Jawa Barat 17132",
           cardImage:
             "https://lh5.googleusercontent.com/p/AF1QipPW2ZScT5fOis3o9fg2F7lX0xZd9nLCrODeopHp=w408-h725-k-no",
           gmapsLink: "https://goo.gl/maps/BBZx91Ue4SAHP1VT6",
