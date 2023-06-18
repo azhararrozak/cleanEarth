@@ -91,8 +91,8 @@ const Home = () => {
       </div>
       {/* Tengah */}
       <br /> <br />
-      <div className="container">
-        <div className="row text-center">
+      <div className="container bg-light pt-5 mb-3 rounded">
+        <div className="row text-center py-4">
           <div className="col-lg-4 col-md-6">
             <div className="icon-box ">
             <a href="/about">
@@ -103,7 +103,8 @@ const Home = () => {
                 Terpercaya
               </h4>
               <p className="description">
-                CleanEarth adalah website yang telah dipercaya masyarakat indonesia telah ada ribuan client dari berbagai daerah
+                CleanEarth adalah website yang telah dipercaya masyarakat
+                indonesia telah ada ribuan client dari berbagai daerah
               </p>
             </div>
           </div>
@@ -118,7 +119,8 @@ const Home = () => {
                 Lokasi
               </h4>
               <p className="description">
-                CleanEarth memudahkan anda untuk mengetahui lokasi bank sampah terdekat dari lokasi anda
+                CleanEarth memudahkan anda untuk mengetahui lokasi bank sampah
+                terdekat dari lokasi anda
               </p>
             </div>
           </div>
@@ -140,6 +142,69 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <section className="steps">
+        <div className="container py-4">
+          <div className="text-center my-4">
+            <h3>Bagaimana Caranya?</h3>
+          </div>
+
+          <div className="row content">
+            <div className="col-md-5">
+              <img src="/img/pilih.jpg" className="img-fluid" alt="" />
+            </div>
+            <div
+              className="col-md-7 pt-4"
+            >
+              <h3>
+                Pilih Sampah
+              </h3>
+              <p className="text-justify">
+                Pilih sampah dengan memisahkan sampah atau barang bekas menjadi dua kategori yaitu masih layak pakai dan tidak layak pakai.
+              </p>
+            </div>
+          </div>
+
+          <div className="row content">
+            <div className="col-md-5 order-1 order-md-2">
+              <img src="/img/kirim.jpg" className="img-fluid" alt="" />
+            </div>
+            <div className="col-md-7 pt-5 order-2 order-md-1">
+              <h3>Kirim Sampah</h3>
+              <p className="text-justify">
+                Kirim sampah ke bank sampah terdekat sesuai dengan lokasi anda yang terdapat pada peta yang sudah di sediakan.
+              </p>
+            </div>
+          </div>
+
+          <div className="row content">
+            <div className="col-md-5">
+              <img src="/img/jual.jpg" className="img-fluid" alt="" />
+            </div>
+            <div
+              className="col-md-7 pt-4"
+            >
+              <h3>
+                Jual Barang Tak Terpakai
+              </h3>
+              <p className="text-justify">
+                Apabila masih layak pakai kamu dapat menjual barang tersebut sesuai dengan harga yang sudah disepakati.
+              </p>
+            </div>
+          </div>
+
+          <div className="row content">
+            <div className="col-md-5 order-1 order-md-2">
+              <img src="/img/uang.jpg" className="img-fluid" alt="" />
+            </div>
+            <div className="col-md-7 pt-5 order-2 order-md-1">
+              <h3>Hasilkan Uang</h3>
+              <p className="text-justify">
+                Hasilkan uang dari barang yang sudah tak terpakai, Hanya dengan mengikuti cara-cara yang di atas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="cta" className="cta">
         <div className="container" data-aos="zoom-in">
           <div className="row">
@@ -147,18 +212,22 @@ const Home = () => {
               <h3>Daftar Sekarang</h3>
               <p>
                 {" "}
-                Jadilah bagian dari kami untuk berkontribusi dan dapatkan manfaatnya
+                Jadilah bagian dari kami untuk berkontribusi dan dapatkan
+                manfaatnya
               </p>
             </div>
             <div className="col-lg-3 cta-btn-container text-center">
-              <a className="cta-btn align-middle text-decoration-none" href="/register">
+              <a
+                className="cta-btn align-middle text-decoration-none"
+                href="/register"
+              >
                 Register
               </a>
             </div>
           </div>
         </div>
       </section>
-      <section>
+      <section className="maps">
         <div className="text-center my-4">
           <h3>Bergabunglah Bersama Kami</h3>
           <p>Merubah dunia menjadi lebih baik</p>

@@ -3,11 +3,6 @@ import { Card, Button } from "react-bootstrap";
 
 
 const Map = () => {
-    const [showCard, setShowCard] = useState(false);
-    const [cardTitle, setCardTitle] = useState("");
-    const [cardDescription, setCardDescription] = useState("");
-    const [cardImage, setCardImage] = useState("");
-    const [gmapsLink, setGmapsLink] = useState("");
   
     useEffect(() => {
       const loadLeaflet = async () => {
@@ -123,18 +118,6 @@ const Map = () => {
               `<b>${markerData.title}</b><br />${markerData.popupDescription}`
             )
             .openPopup();
-  
-          marker.on("click", () => {
-            setShowCard(true);
-            setCardTitle(markerData.title);
-            setCardDescription(markerData.cardDescription);
-            setCardImage(markerData.cardImage);
-            setGmapsLink(markerData.gmapsLink);
-          });
-        });
-  
-        map.on("click", () => {
-          setShowCard(false);
         });
       };
   
@@ -144,24 +127,6 @@ const Map = () => {
     return (
       <div>
         <div id="mapHome" className="leaflet-container"></div>
-        {showCard && (
-          <Card className="cardTracker">
-            <Card.Img src={cardImage} />
-            <Card.Body>
-              <Card.Title>{cardTitle}</Card.Title>
-              <Card.Text>{cardDescription}</Card.Text>
-              <Button
-                className="gmaps-button"
-                variant="primary"
-                href={gmapsLink}
-                target="_blank"
-              >
-                Open in Google Maps
-              </Button>
-            </Card.Body>
-          </Card>
-        )}
-        
       </div>
     );
 }
