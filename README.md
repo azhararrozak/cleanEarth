@@ -23,10 +23,17 @@ Dalam website ini kami menydiakan dua role:
 + Copy VA Pembayaran
 + Gunakan simulator midtrans
   * https://simulator.sandbox.midtrans.com/bni/va/index
+### Cara Menambahkan Produk
++ Masuk sebagai Admin
+  * Email: admin@gmail.com
+  * Pass: 123456
++ Klik Profile -> Produk
 ### Project Brief dan Presentasi
 + Project Brief
   * https://docs.google.com/document/d/19lLOuoitAXvSwfkHhxEuaXQMDI2xExdCDVxRF5Aqhk0/edit?usp=sharing
-+ Link Presentasi
++ Link Slide Presentasi
   * https://docs.google.com/presentation/d/1OCjNXSIwpw951QR7JsmIj50tFYCC0e1JrGW940zzMMQ/edit
++ Link Video Presentasi
+  * https://youtu.be/bSnRFLf002U
 + Link Video Demo
-  * Comming Sooon
+  * https://youtu.be/YxdvYG4Gqzg
