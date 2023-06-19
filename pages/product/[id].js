@@ -3,6 +3,7 @@ import React, { useState, useContext } from "react";
 import { getData } from "@/utils/dataFetch";
 import { DataContext } from "@/store/GlobalState";
 import { addToCart } from "@/store/Action";
+import Head from "next/head";
 
 const DetailProduct = (props) => {
   const [product] = useState(props.product);
@@ -18,6 +19,9 @@ const DetailProduct = (props) => {
 
   return (
     <div className="row detail_page mx-0">
+      <Head>
+        <title>Detail Produk</title>
+      </Head>
       <div className="col-md-6">
         <img
           src={product.images[tab].url}

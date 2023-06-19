@@ -3,11 +3,15 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import { getData } from "@/utils/dataFetch";
+import Head from "next/head";
 
 const DetailBlog = (props) => {
   const [blog] = useState(props.blog);
   return (
     <div className="blog-detail col-xs-12 col-sm-12 col-md-7 col-lg-8 mx-auto">
+      <Head>
+        <title>Detail Blog</title>
+      </Head>
       <div className="blog-content blog-container">
         <a href="/blog" className="btn btn-success">Back To Blogs</a>
         <h3 className="text-center">{blog.title}</h3>

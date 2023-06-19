@@ -4,13 +4,20 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Map from "@/components/Map";
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faLocationDot, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import Head from "next/head";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCheck,
+  faLocationDot,
+  faCartShopping,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   return (
     <div className="home">
+      <Head>
+        <title>Home Page</title>
+      </Head>
       <div
         id="carouselExampleCaptions"
         className="carousel slide"
@@ -95,13 +102,11 @@ const Home = () => {
         <div className="row text-center py-4">
           <div className="col-lg-4 col-md-6">
             <div className="icon-box ">
-            <a href="/about">
-              <FontAwesomeIcon icon={faCheck} className="custom-icon fa-4x" />
+              <a href="/about">
+                <FontAwesomeIcon icon={faCheck} className="custom-icon fa-4x" />
               </a>
               <br /> <br />
-              <h4 className="title">
-                Terpercaya
-              </h4>
+              <h4 className="title">Terpercaya</h4>
               <p className="description">
                 CleanEarth adalah website yang telah dipercaya masyarakat
                 indonesia telah ada ribuan client dari berbagai daerah
@@ -111,13 +116,14 @@ const Home = () => {
           <div className="col-lg-4 col-md-6">
             <div className="icon-box">
               <a href="/tracker">
-                <FontAwesomeIcon icon={faLocationDot} className="custom-icon fa-4x" />
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  className="custom-icon fa-4x"
+                />
               </a>
               <br />
               <br />
-              <h4 className="title">
-                Lokasi
-              </h4>
+              <h4 className="title">Lokasi</h4>
               <p className="description">
                 CleanEarth memudahkan anda untuk mengetahui lokasi bank sampah
                 terdekat dari lokasi anda
@@ -126,14 +132,15 @@ const Home = () => {
           </div>
           <div className="col-lg-4 col-md-6">
             <div className="icon-box">
-            <a href="/product">
-              <FontAwesomeIcon icon={faCartShopping} className="custom-icon fa-4x" />
+              <a href="/product">
+                <FontAwesomeIcon
+                  icon={faCartShopping}
+                  className="custom-icon fa-4x"
+                />
               </a>
               <br />
               <br />
-              <h4 className="title">
-                Jual-Beli
-              </h4>
+              <h4 className="title">Jual-Beli</h4>
               <p className="description">
                 CleanEarth adalah website dapat memudahkan masyarakat untuk
                 melakukan jual beli sampah atau barang bekas secara online
@@ -152,14 +159,11 @@ const Home = () => {
             <div className="col-md-5">
               <img src="/img/pilih.jpg" className="img-fluid" alt="" />
             </div>
-            <div
-              className="col-md-7 pt-4"
-            >
-              <h3>
-                Pilih Sampah
-              </h3>
+            <div className="col-md-7 pt-4">
+              <h3>Pilih Sampah</h3>
               <p className="text-justify">
-                Pilih sampah dengan memisahkan sampah atau barang bekas menjadi dua kategori yaitu masih layak pakai dan tidak layak pakai.
+                Pilih sampah dengan memisahkan sampah atau barang bekas menjadi
+                dua kategori yaitu masih layak pakai dan tidak layak pakai.
               </p>
             </div>
           </div>
@@ -171,7 +175,8 @@ const Home = () => {
             <div className="col-md-7 pt-5 order-2 order-md-1">
               <h3>Kirim Sampah</h3>
               <p className="text-justify">
-                Kirim sampah ke bank sampah terdekat sesuai dengan lokasi anda yang terdapat pada peta yang sudah di sediakan.
+                Kirim sampah ke bank sampah terdekat sesuai dengan lokasi anda
+                yang terdapat pada peta yang sudah di sediakan.
               </p>
             </div>
           </div>
@@ -180,14 +185,11 @@ const Home = () => {
             <div className="col-md-5">
               <img src="/img/jual.jpg" className="img-fluid" alt="" />
             </div>
-            <div
-              className="col-md-7 pt-4"
-            >
-              <h3>
-                Jual Barang Tak Terpakai
-              </h3>
+            <div className="col-md-7 pt-4">
+              <h3>Jual Barang Tak Terpakai</h3>
               <p className="text-justify">
-                Apabila masih layak pakai kamu dapat menjual barang tersebut sesuai dengan harga yang sudah disepakati.
+                Apabila masih layak pakai kamu dapat menjual barang tersebut
+                sesuai dengan harga yang sudah disepakati.
               </p>
             </div>
           </div>
@@ -199,14 +201,15 @@ const Home = () => {
             <div className="col-md-7 pt-5 order-2 order-md-1">
               <h3>Hasilkan Uang</h3>
               <p className="text-justify">
-                Hasilkan uang dari barang yang sudah tak terpakai, Hanya dengan mengikuti cara-cara yang di atas.
+                Hasilkan uang dari barang yang sudah tak terpakai, Hanya dengan
+                mengikuti cara-cara yang di atas.
               </p>
             </div>
           </div>
         </div>
       </section>
       <section id="cta" className="cta">
-        <div className="container" data-aos="zoom-in">
+        <div className="container">
           <div className="row">
             <div className="col-lg-9 text-center text-lg-start">
               <h3>Daftar Sekarang</h3>
@@ -233,36 +236,35 @@ const Home = () => {
           <p>Merubah dunia menjadi lebih baik</p>
         </div>
 
-
-
         <div className="container">
           <div className="row ">
             <div className="px-4 pb-4 col-lg-6">
               <Map />
             </div>
-            <div className="col-lg-6">
+            <div className="px-4 pb-4 col-lg-6">
               <form
                 action="mailto:contact@cleanearth.org"
                 method="post"
                 encType="text/plain"
               >
                 <label htmlFor="name">Your name : </label>
-                <input type="text" name="name" /><br />
+                <input type="text" name="name" />
+                <br />
 
                 <label htmlFor="email">Your email : </label>
-                <input type="email" name="email" /><br />
+                <input type="email" name="email" />
+                <br />
 
-                <label htmlFor="message">Your message : </label><br />
-                <textarea name="message" cols="40" rows="4"></textarea><br />
+                <label htmlFor="message">Your message : </label>
+                <br />
+                <textarea name="message"></textarea>
+                <br />
 
                 <input type="submit" value="Send" />
               </form>
             </div>
-
           </div>
         </div>
-
-
       </section>
     </div>
   );

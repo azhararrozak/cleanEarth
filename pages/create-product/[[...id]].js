@@ -5,6 +5,7 @@ import { DataContext } from "@/store/GlobalState";
 import { imageUpload } from "@/utils/imageUploadCloudinary";
 import { postData, getData, putData } from "@/utils/dataFetch";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const CreateProduct = () => {
   const initialState = {
@@ -149,6 +150,9 @@ const CreateProduct = () => {
 
   return (
     <div className="products_manager m-4">
+      <Head>
+        <title>Create Produk</title>
+      </Head>
       <form className="row" onSubmit={handleSubmit}>
         <div className="col-md-6">
           <input
