@@ -137,7 +137,7 @@ const cart = () => {
   };
 
   return (
-    <div className="row mx-auto">
+    <div className="row mx-0">
       <Head>
         <title>Cart Page</title>
       </Head>
