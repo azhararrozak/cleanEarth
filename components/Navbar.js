@@ -127,7 +127,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-light navbar-expand-md bg-faded justify-content-center bg-light">
+    <nav className="navbar navbar-light navbar-expand-md bg-faded bg-light">
       <Link href="/" legacyBehavior>
         <a className="navbar-brand d-flex w-50 mr-auto">CleanEarth</a>
       </Link>
